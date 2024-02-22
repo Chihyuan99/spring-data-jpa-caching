@@ -91,19 +91,24 @@ public void deleteProduct(@PathVariable("id") int id) {
 The application is available at [http://localhost:8080](http://localhost:8080)
 
 When you try to get a particular product by id for the first time, then it executes the service method and data is fetched from the **database**. For example, fetch the information of product 1 at http://localhost:8080/products/1
+
 <img src="images/get1.png" width="60%">
 
 The observed SQL select query in STS console indicates the data is fetched from the database.
+
 <img src="images/get.png" >
 
 But if you try to fetch that product information **AGAIN**, then the results will be displayed very fast as this time the data is fetched from the **cache**. And **NO** log will be shown in the console since the data is not fetched from the database.
 
 
 In addition, when the data is updated in the database, the already existed cache should be updated automatically as well. For example, when we update the the information of product 1 at http://localhost:8080/products/1 with PUT method.
+
 <img src="images/put2.png" width="60%">
 
 The observed SQL select query in STS console indicates the data is successfully updated in the database.
+
 <img src="images/put.png" >
 
 This time when we use the GET method to get product 1, it will fetch the updated values from the **cache** since there is no log in the console.
+
 <img src="images/put3.png" width="60%">
