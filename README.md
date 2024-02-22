@@ -12,6 +12,7 @@ To optimize application performance, in this project, I implemented **HazelCast 
 -   Spring Tool Suite4 (STS)
 -   MySQL 8.0
 -   Cache Provider: Hazelcast
+-   Postman
 
 ## Project Structure
 
